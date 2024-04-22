@@ -50,9 +50,8 @@ function Home(props) {
  useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://backend221final-a5efd2b7e019.herokuapp.com/fetch');
+        const response = await fetch('https://backend221final-a5efd2b7e019.herokuapp.com/fetch').catch((error)=>  setTimeout(fetchData(), '1000'));
         if (!response.ok) {
-          setTimeout(fetchData(), '1000')
           setLoggedIn(false)
           props.login(false)
         } else {
