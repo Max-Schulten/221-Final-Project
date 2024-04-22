@@ -13,6 +13,7 @@ import {CircularProgress, Stack, Typography} from '@mui/joy'
 import moment from 'moment'
 import { ListGroup, ListGroupItem } from 'react-bootstrap'
 import '../style/home.css'
+import 'jquery'
 
 const options = {
   plugins: {
