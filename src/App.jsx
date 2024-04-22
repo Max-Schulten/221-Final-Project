@@ -12,10 +12,9 @@ import { Stack, Typography } from '@mui/joy'
 
 function App() {
 
-  const [profile, setProfile] = useState({})
   const [loggedIn, setLoggedIn] = useState(false)
 
-  
+
 
   return (
     <BrowserRouter>
@@ -35,7 +34,6 @@ function App() {
        <Routes>
         <Route index element={<Home login={setLoggedIn}/>}/>
         <Route path='/home' element={<Home/>}/>
-        <Route path='/about' element={<About />}/>
        </Routes>
     </div>
     </BrowserRouter>
