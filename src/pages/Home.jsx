@@ -46,7 +46,7 @@ function Home(props) {
     track: 0
   })
 
-  useEffect(() => {
+ /* useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch('https://maxschultenfinal-6072d8e4ce91.herokuapp.com/fetch');
@@ -63,7 +63,7 @@ function Home(props) {
       }
     };
     fetchData();
-  }, []);
+  }, []); */
 
   useEffect(() =>{
     let trackAvgPop = 0
