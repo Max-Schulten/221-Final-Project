@@ -9,12 +9,11 @@ import Button from 'react-bootstrap/Button'
 import './style/app.css'
 import { Stack, Typography } from '@mui/joy'
 
+
 function App() {
 
   const [loggedIn, setLoggedIn] = useState(false)
-
-
-
+  
   return (
     <BrowserRouter>
     <div className='page'>

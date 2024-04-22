@@ -187,6 +187,7 @@ function Home(props) {
       <Stack direction={'column'} alignItems={'center'}>
         <Typography level='h1' sx={{color:'rgb(29,185,84)'}}>Welcome to Statsify!</Typography>
         <Typography level='h3' sx={{color: 'white'}}>Login to learn more about how you listen.</Typography>
+        <Typography level='h3' sx={{color: 'rgb(29,185,84)'}}>Please reload the page after you're done logging in, and enjoy!</Typography>
       </Stack>
       }
     </div>
