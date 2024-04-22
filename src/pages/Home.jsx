@@ -45,10 +45,10 @@ function Home(props) {
     track: 0
   })
 
- /* useEffect(() => {
+ useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://maxschultenfinal-6072d8e4ce91.herokuapp.com/fetch');
+        const response = await fetch('https://backend221final-a5efd2b7e019.herokuapp.com/fetch');
         if (!response.ok) {
           setTimeout(fetchData(), '1000')
         } else {
@@ -62,7 +62,7 @@ function Home(props) {
       }
     };
     fetchData();
-  }, []); */
+  }, []); 
 
   useEffect(() =>{
     let trackAvgPop = 0
