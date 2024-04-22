@@ -1,0 +1,16 @@
+.card-img {
+    transition: filter 0.2s ease;
+}
+
+.card-img:hover {
+    filter: blur(3px);
+}
+.card-img:hover + .overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+
+.overlay {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2 ease;
+}
