@@ -52,7 +52,7 @@ function Home(props) {
       try {
         const response = await fetch('https://backend221final-a5efd2b7e019.herokuapp.com/fetch');
         if (!response.ok) {
-          setTimeout(fetchData(), '100')
+          setTimeout(fetchData(), '1000')
           setLoggedIn(false)
           props.login(false)
         } else {
