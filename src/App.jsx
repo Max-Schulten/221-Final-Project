@@ -15,7 +15,10 @@ function App() {
   const [profile, setProfile] = useState({})
   const [loggedIn, setLoggedIn] = useState(false)
 
+  
+
   return (
+    <BrowserRouter>
     <div className='page'>
     <Navbar className='nav'>
         <Container>
@@ -29,14 +32,13 @@ function App() {
         </Navbar.Collapse>
         </Container>
       </Navbar>
-      <BrowserRouter>
        <Routes>
-        <Route index element={<Home/>}/>
+        <Route index element={<Home login={setLoggedIn}/>}/>
         <Route path='/home' element={<Home/>}/>
         <Route path='/about' element={<About />}/>
        </Routes>
-      </BrowserRouter>
     </div>
+    </BrowserRouter>
   )
 }
 

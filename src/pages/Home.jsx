@@ -45,16 +45,22 @@ function Home(props) {
     track: 0
   })
 
+  const [loggedIn, setLoggedIn] = useState(false)
+
  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch('https://backend221final-a5efd2b7e019.herokuapp.com/fetch');
         if (!response.ok) {
-          setTimeout(fetchData(), '1000')
+          setTimeout(fetchData(), '250')
+          setLoggedIn(false)
+          props.login(false)
         } else {
         const data = await response.json();
         setTopTracks(data.topTracks.items);
         setTopArtists(data.topArtists.items);
+        setLoggedIn(true)
+        props.login(true)
         }
         
       } catch (error) {
@@ -122,7 +128,7 @@ function Home(props) {
 
   return (
     <div className='body'> 
-      <Container>
+      {loggedIn == true ? <Container>
         <Accordion defaultActiveKey='' className='mt-3' variant='dark'>
           <Accordion.Item>
             <Accordion.Header><h3>Your Favorite Tracks</h3></Accordion.Header>
@@ -177,8 +183,12 @@ function Home(props) {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-      </Container>
-      
+      </Container>:
+      <Stack direction={'column'} alignItems={'center'}>
+        <Typography level='h1' sx={{color:'rgb(29,185,84)'}}>Welcome to Statsify!</Typography>
+        <Typography level='h3' sx={{color: 'white'}}>Login to learn more about how you listen.</Typography>
+      </Stack>
+      }
     </div>
   )
 }
